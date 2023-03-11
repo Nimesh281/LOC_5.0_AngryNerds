@@ -22,7 +22,7 @@ import Cards from './Cards';
 // import { EffectCards } from "swiper";
 
 
-const pages = ['Home', 'Wedding', 'Ocassions', 'Ideas', 'Business',"food","interior","new-born"];
+const pages = ['Home', 'Wedding', 'Ocassions', 'Ideas', 'Business'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
