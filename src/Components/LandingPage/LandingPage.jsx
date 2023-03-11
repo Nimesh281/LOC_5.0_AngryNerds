@@ -15,15 +15,15 @@ import logo from "../../assets/images/logo.svg"
 import { height } from '@mui/system';
 import "../CSS/LandingPage.css"
 import Cards from './Cards';
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "swiper/css/effect-cards";
-// import "./styles.css";
+// import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 // import { EffectCards } from "swiper";
+// // Import Swiper styles
+// import "swiper/swiper.min.css";
+// import "swiper/modules/Pagination/Pagination.min.css";
 
 
-const pages = ['Home', 'Wedding', 'Ocassions', 'Ideas', 'Business',"food","interior","new-born"];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Home', 'Wedding', 'Ocassions', 'Ideas', 'Business', "food", "interior", "new-born"];
+const settings = ['User', 'Photographer', 'Admin'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -46,76 +46,19 @@ function ResponsiveAppBar() {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: '#FFFFFF', height: "7vh"}}>
-        <Container maxWidth="xl">
-          <Toolbar disableGutters>
+      <AppBar position="static" sx={{ backgroundColor: '#FFFFFF', height: "10vh", width: "100%" }}>
+        {/* <Container lg={12} sx={{width:"100vw", m:0, p:0}}> */}
+        <Toolbar disableGutters lg={12} sx={{ m: 0, p: 0 }}>
 
-            <div className='logo-container' style={{height: '100px'}}>
-              <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                href="/"
-                sx={{
-                  mr: 2,
-                  display: { xs: 'none', md: 'flex' },
-                  fontFamily: 'monospace',
-                  fontWeight: 700,
-                  letterSpacing: '.3rem',
-                  color: 'inherit',
-                  textDecoration: 'none',
-                }}
-              >
-                <img style={{ height: '100px', width: '9rem' }} src={logo} />
-              </Typography>
-            </div>
-
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-                color="inherit"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                color='primary'
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: 'block', md: 'none' },
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center" color='primary'>{page}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
+          <div className='logo-container' style={{ height: '100px' }}>
             <Typography
-              variant="h5"
+              variant="h6"
               noWrap
               component="a"
-              href=""
+              href="/"
               sx={{
                 mr: 2,
-                display: { xs: 'flex', md: 'none' },
-                flexGrow: 1,
+                display: { xs: 'none', md: 'flex' },
                 fontFamily: 'monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
@@ -123,9 +66,66 @@ function ResponsiveAppBar() {
                 textDecoration: 'none',
               }}
             >
-              LOGO
+              <img style={{ height: '100px', width: '9rem', marginLeft: "10rem" }} src={logo} />
             </Typography>
-            <Box justifyContent="flex-end" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          </div>
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, mr: "10" }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              color='primary'
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" color='primary'>{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href=""
+            sx={{
+              mr: 10,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            LOGO
+          </Typography>
+          {/* <Box justifyContent="flex-end" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {pages.map((page) => (
                 <Button
                   key={page}
@@ -135,39 +135,39 @@ function ResponsiveAppBar() {
                   {page}
                 </Button>
               ))}
-            </Box>
+            </Box> */}
 
-            <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Button sx={{ color: 'red' }}>Login</Button>
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: '45px' }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-          </Toolbar>
-        </Container>
+          <Box sx={{ flexGrow: 0, marginLeft: "auto" }}>
+            <Tooltip title="Open settings">
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Button sx={{ color: '#171717', text: "Brandon Text", fontWeight: "600" }}>Login/SignUp</Button>
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+        </Toolbar>
+        {/* </Container> */}
       </AppBar>
       <div>
         <section id="about">
@@ -190,28 +190,14 @@ function ResponsiveAppBar() {
                 </a>
               </div>
             </div>
-            <div className="right_side" data-aos="zoom-in" data-aos-delay="300">
-              {/* <Swiper
-                effect={"cards"}
-                grabCursor={true}
-                modules={[EffectCards]}
-                className="mySwiper"
-              >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
-              </Swiper> */}
+           <div className="right_side">
+              
               <div className="about_image">
                 <img className="abt_img1" src="/images/Shrug-amico.svg" alt="" />
               </div>
-            </div>
+              </div>
           </div>
+        
         </section>
       </div>
       <section id="offers">
@@ -223,11 +209,10 @@ function ResponsiveAppBar() {
           </div>
 
 
-          <div className="cols" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200"
-            data-aos-offset="0">
+          <div className="cols">
             <div className="col">
               <div className="container">
-                <div className="front">
+                <div className="front1" >
                   <div className="inner">
                     <h2>Photographers</h2>
                   </div>
@@ -242,7 +227,7 @@ function ResponsiveAppBar() {
 
             <div className="col">
               <div className="container">
-                <div className="front">
+                <div className="front2">
                   <div className="inner">
                     <h2>Stock Photos</h2>
                   </div>
@@ -257,7 +242,7 @@ function ResponsiveAppBar() {
 
             <div className="col">
               <div className="container">
-                <div className="front">
+                <div className="front3">
                   <div className="inner">
                     <h2>Premium Photos</h2>
                   </div>
@@ -293,14 +278,16 @@ function ResponsiveAppBar() {
           </div>
           <div className="left_side_begin" data-aos="zoom-in" data-aos-delay="300">
             <div className="begin_image">
-              <img className="abt_img1" src="/images/undraw_my_answer_re_k4dv (1).svg" alt="" />
+              <img className="abt_img1" src="" alt="" />
             </div>
           </div>
         </div>
       </section>
       {/* Footer */}
-      <footer className="footer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200"
-        data-aos-offset="0">
+
+      <footer className="footer">
+        <div className="copyright1" />
+
         <div className="container_footer">
           <div className="row_foot">
             <div className="footer_item">
@@ -320,23 +307,10 @@ function ResponsiveAppBar() {
                 </li>
               </ul>
             </div>
-            <div className="footer_item">
-              <h2>Opening Hours</h2>
-              <p>Monday to Sunday <br /> 11:00AM - 1:00AM</p>
-            </div>
-            <div className="footer_item">
-              <h2>Follow Us On:</h2>
-              <div className="social_links">
-                <a href="#"> <i className="fab fa-facebook"></i> </a>
-                <a href="#"> <i className="fab fa-instagram"></i> </a>
-                <a href="#"> <i className="fab fa-twitter"></i> </a>
-                <a href="#"> <i className="fab fa-youtube"></i> </a>
-              </div>
-            </div>
           </div>
           <div className="row">
             <div className="copyright">
-              &copy; 2022 - BLISS RESTAURANT
+              &copy; 2023 - SNAPHUB
             </div>
           </div>
         </div>
