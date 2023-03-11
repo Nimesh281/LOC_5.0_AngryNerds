@@ -3,10 +3,11 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 // import InformationPage  from '../src/Components/LandingPage/InformationPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Wedding from "./Components/Wedding/Wedding";
-import LoginSignupPage from "./Components/User/LoginSignupPage";
+import Login from "./Components/User/Login";
 import Home from "../src/Components/Home/Home";
 import { purple } from "@mui/material/colors";
 import { createMuiTheme, ThemeProvider } from "@mui/material";
+import Register from "./Components/User/Register";
 
 const theme = createMuiTheme({
   palette: {
@@ -30,8 +31,10 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/wedding" element={<Wedding />} />
-            <Route path="/login" element={<LoginSignupPage />} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/register" element={<Register/>} />
             <Route path="/home" element={<Home />} />
+            <Route path="/PhotographerProfile" element={<Home />} />
             {/* <InformationPage/> */}
           </Routes>
         </BrowserRouter>

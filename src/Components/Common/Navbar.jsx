@@ -13,7 +13,9 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logo from "../../assets/images/logo.svg"
 import { height } from '@mui/system';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
+const occassions = ["food","interior","new-born"];
 const pages = ['Home', 'Wedding', 'Ocassions', 'Ideas', 'Business'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -198,7 +200,36 @@ function Navbar() {
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Button sx={{ color: 'white' }}>Login</Button>
+                  <Button sx={{ color: 'white' }} endIcon={<ArrowDropDownIcon/>}>Occassions</Button>
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {occassions.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Open occassions">
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <Button sx={{ color: 'red' }} endIcon={<ArrowDropDownIcon/>}>Login</Button>
                 </IconButton>
               </Tooltip>
               <Menu
