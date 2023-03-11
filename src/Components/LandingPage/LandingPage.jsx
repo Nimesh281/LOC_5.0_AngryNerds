@@ -15,6 +15,7 @@ import logo from "../../assets/images/logo.svg"
 import { height } from '@mui/system';
 import "../CSS/LandingPage.css"
 import Cards from './Cards';
+import AnimatedCaraousel from './AnimatedCaraousel';
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
 // import "swiper/css/effect-cards";
@@ -207,9 +208,8 @@ function ResponsiveAppBar() {
                 <SwiperSlide>Slide 8</SwiperSlide>
                 <SwiperSlide>Slide 9</SwiperSlide>
               </Swiper> */}
-              <div className="about_image">
-                <img className="abt_img1" src="/images/Shrug-amico.svg" alt="" />
-              </div>
+              <AnimatedCaraousel/>
+              
             </div>
           </div>
         </section>

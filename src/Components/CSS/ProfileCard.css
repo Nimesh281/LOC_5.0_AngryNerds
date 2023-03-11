@@ -41,18 +41,18 @@
   text-align: center;
 }
 
-ul {
+ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.i-l {
+.i-l{
   float: left;
   margin-left: 16px;
   margin-top: 16px;
 }
-.i-r {
+.i-r{
   float: right;
   margin-right: 16px;
   margin-top: 16px;
