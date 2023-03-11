@@ -7,6 +7,7 @@ import LoginSignupPage from "./Components/User/LoginSignupPage";
 import Home from "../src/Components/Home/Home";
 import { purple } from "@mui/material/colors";
 import { createMuiTheme, ThemeProvider } from "@mui/material";
+import Portfolio from "./Components/Photographer/Portfolio";
 
 const theme = createMuiTheme({
   palette: {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/wedding" element={<Wedding />} />
             <Route path="/login" element={<LoginSignupPage />} />
+          <Route path="/portfolio" element={<Portfolio/>} />
             <Route path="/home" element={<Home />} />
             {/* <InformationPage/> */}
           </Routes>

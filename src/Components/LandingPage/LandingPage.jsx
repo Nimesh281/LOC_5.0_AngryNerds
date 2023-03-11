@@ -50,7 +50,7 @@ function ResponsiveAppBar() {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
 
-            <div className='logo-container' style={{ height: '100px' }}>
+            <div className='logo-container' style={{height: '100px'}}>
               <Typography
                 variant="h6"
                 noWrap
