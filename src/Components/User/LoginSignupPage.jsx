@@ -29,75 +29,84 @@ const LoginSignupPage = () => {
   };
 
   return (
-    <Container maxWidth="sm">
-      <Box sx={{backgroundColor:"#F1F3F6" ,my:10,p:10,borderRadius:'2rem' }}>
+    <Container  maxWidth="sm">
+      <Box className="login-signup-container" sx={{display:"flex",flexdire:'row'}}>
         <Box
           sx={{
-            mt: 8,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            backgroundColor: "#F1F3F6",
+            my: 10,
+            p: 10,
+            borderRadius: "2rem",
           }}
         >
-          <Typography component="h1" variant="h5">
-            {isLogin ? "Log in" : "Sign up"}
-          </Typography>
-          <Box component="form" onSubmit={handleFormSubmit} sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-              value={email}
-              onChange={handleEmailChange}
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-            {!isLogin && (
+          <Box
+            sx={{
+              mt: 8,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Typography component="h1" variant="h5">
+              {isLogin ? "Log in" : "Sign up"}
+            </Typography>
+            <Box component="form" onSubmit={handleFormSubmit} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required
                 fullWidth
-                name="confirmPassword"
-                label="Confirm Password"
-                type="password"
-                id="confirm-password"
-                autoComplete="current-password"
-                value={confirmPassword}
-                onChange={handleConfirmPasswordChange}
+                id="email"
+                label="Email Address"
+                name="email"
+                autoComplete="email"
+                autoFocus
+                value={email}
+                onChange={handleEmailChange}
               />
-            )}
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              {isLogin ? "Log in" : "Sign up"}
-            </Button>
-            <Button
-              fullWidth
-              variant="outlined"
-              onClick={() => setIsLogin((prevIsLogin) => !prevIsLogin)}
-            >
-              {isLogin
-                ? "Don't have an account? Sign up"
-                : "Already have an account? Log in"}
-            </Button>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+                value={password}
+                onChange={handlePasswordChange}
+              />
+              {!isLogin && (
+                <TextField
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="confirmPassword"
+                  label="Confirm Password"
+                  type="password"
+                  id="confirm-password"
+                  autoComplete="current-password"
+                  value={confirmPassword}
+                  onChange={handleConfirmPasswordChange}
+                />
+              )}
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                {isLogin ? "Log in" : "Sign up"}
+              </Button>
+              <Button
+                fullWidth
+                variant="outlined"
+                onClick={() => setIsLogin((prevIsLogin) => !prevIsLogin)}
+              >
+                {isLogin
+                  ? "Don't have an account? Sign up"
+                  : "Already have an account? Log in"}
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Box>

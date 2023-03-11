@@ -6,15 +6,16 @@ import { Container } from '@mui/system';
 export default function ImageListCustom() {
   return (
     <Container >
-    <ImageList sx={{ width: "85%", }} cols={4} >
+    <ImageList sx={{ width: "85%"}} cols={3} gap={20} >
       {itemData.map((item) => (
-        <ImageListItem key={item.img}>
+        <ImageListItem key={item.img} sx={{borderRadius:"20px"}}>
           <img
            className='list-item'
             src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
             srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
             alt={item.title}
             loading="lazy"
+            style={{borderRadius:"20px",boxShadow:"10px 5px 5px #f2f2f2"}}
           />
         </ImageListItem>
       ))}

@@ -41,7 +41,6 @@ function Navbar() {
     <AppBar gutterBottom position="static" sx={{backgroundColor:'#FBEAE7'}}>
       <Container maxWidth="xl" gutterBottom>
         <Toolbar >
-          
           <div className='logo-container' style={{height:'100px'}}>
             <Typography
               variant="h6"
@@ -122,7 +121,7 @@ function Navbar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'red', display: 'block' }}
               >
                 {page}
               </Button>
@@ -132,7 +131,7 @@ function Navbar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Button sx={{ color: 'white' }}>Login</Button>
+              <Button sx={{ color: 'red' }}>Login</Button>
               </IconButton>
             </Tooltip>
             <Menu
