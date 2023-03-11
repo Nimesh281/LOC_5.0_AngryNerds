@@ -8,6 +8,7 @@ import Home from "../src/Components/Home/Home";
 import { purple } from "@mui/material/colors";
 import { createMuiTheme, ThemeProvider } from "@mui/material";
 import Register from "./Components/User/Register";
+import React from "react";
 
 const theme = createMuiTheme({
   palette: {
@@ -42,5 +43,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
