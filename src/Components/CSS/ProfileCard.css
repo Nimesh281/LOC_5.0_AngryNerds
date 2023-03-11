@@ -1,22 +1,22 @@
-body {
+/* body {
   background-color: #31394d;
-}
+} */
 .color-card {
-  background: #31394d;
+  background: #f6e1c3;
 }
 
 .color-card-2 {
   background: #fdfeff;
 }
 .title {
-  color: #ffffff;
-  font-family: roboto;
-  weight: 300;
+  color: #6b3e26;
+  font-family: "Montserrat";
+  weight: 500;
 }
 .title-2 {
-  color: #2d354a;
-  font-family: roboto;
-  weight: 300;
+  color: #6b3e26;
+  font-family: Montserrat;
+  weight: 400;
 }
 .followers {
   color: #666b7d;
@@ -27,17 +27,17 @@ body {
 }
 
 .job-title {
-  color: #7c8097;
+  color: #6b3e26;
   font-size: 12px;
-  weight: 100;
-  font-family: roboto;
+  weight: 300;
+  font-family: Montserrat;
 }
 
 .desc {
   font-size: 12px;
   margin-left: 65px;
   margin-right: 65px;
-  color: #b7b8c0;
+  color: #875a41;
   text-align: center;
 }
 
@@ -88,7 +88,7 @@ hr {
   margin-top: 16px;
 }
 .color-a {
-  background: linear-gradient(to top right, #8162ce, #f54ba5);
+  background: #E85A4F;
 }
 
 .color-b {
@@ -105,7 +105,7 @@ hr {
 .btn_card {
   border: none;
   height: 40px;
-  color: #ffffff;
+  color: #fff;
   width: 35%;
   font-size: 16px;
   border-radius: 30px;
@@ -115,10 +115,10 @@ hr {
   border: solid 1px #da59b1;
   height: 40px;
   font-family: Roboto;
-  color: #da59b1;
+  color: #e85a4f;
   background: #ffffff;
   width: 35%;
-  border-color: linear-gradient(to top right, #8162ce, #f54ba5);
+  background: linear-gradient(90deg, rgba(232,90,79,1) 0%, rgba(246,225,195,1) 56%, rgba(195,139,110,1) 100%);
   border-radius: 30px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.16);
 }
