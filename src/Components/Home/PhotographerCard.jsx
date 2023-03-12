@@ -1,12 +1,18 @@
 import React from "react";
 import "../CSS/ProfileCard.css";
 
-function PhotographerCard() {
+import VerifiedIcon from '@mui/icons-material/Verified';
+
+function PhotographerCard({ data }) {
   return (
     <div>
       <div class="container_card">
+
         <div class="grid-7 element-animation">
           <div class="card_card color-card">
+          <div class="verfied_icon" style={{position:"absolute",top:"0",left:"0"}}>
+           
+          </div>
             <ul>
               <li>
                 <i class="fas fa-arrow-left i-l w"></i>
@@ -23,8 +29,24 @@ function PhotographerCard() {
               alt="profile-pic"
               class="profile"
             />
-            <h1 class="title">Bevely Little</h1>
-            <p class="job-title"> SENIOR PRODUCT DESIGNER</p>
+          <h1 class="title">{data.name} <span> {data.isVerified && 
+                <VerifiedIcon />
+            }</span></h1>
+           
+           
+            <p class="job-title-heading" > Available For </p>
+            {data?.categories?.map((category) => {
+              return <span class="job-title">{category} </span>
+            })}
+
+            <br />
+            <br />
+
+            <p class="job-title-heading"> Available At </p>
+            {data.avl_Locations?.map((location) => {
+              return <span class="job-title">{location} </span>
+            })}
+            {/* <p class="job-title"> SENIOR PRODUCT DESIGNER</p> */}
             <div class="desc top">
               <p>Create usable interface and designs @GraphicSpark</p>
             </div>
