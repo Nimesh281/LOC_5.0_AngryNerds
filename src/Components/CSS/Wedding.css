@@ -1,0 +1,13 @@
+.para {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #b2456e;
+    font-family: Brandon Text;
+    --background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(178, 69, 110, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    --background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
