@@ -8,7 +8,7 @@
 }
 
 #about {
-    background: #171717;
+    background: #FBEAE7;
 }
 
 #about .container {
@@ -29,7 +29,8 @@
     font-weight: 700;
     font-size: 3.2rem;
     margin: 20px 5px 20px 0px;
-    background: linear-gradient(141deg, rgb(200, 124, 255) 0%, rgb(116, 92, 252) 50%, rgb(63, 241, 253) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(178, 69, 110, 1) 35%, rgba(0, 212, 255, 1) 100%);
     line-height: 60px;
     text-align: start;
     background-clip: text;
@@ -37,19 +38,12 @@
     -webkit-text-fill-color: transparent
 }
 
-/* #about .about_heading span {
-    background: linear-gradient(141deg, rgb(200, 124, 255) 0%, rgb(116, 92, 252) 50%, rgb(63, 241, 253) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
-
 #about .about_info {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
     margin: 0px 5px 20px 0px;
-    color: #eee;
+    color: #b2456e;
     text-align: left;
 }
 
@@ -73,10 +67,10 @@
 
 .fancy {
     background-color: transparent;
-    border: 2px solid #eee;
+    border: 2px solid #552619;
     border-radius: 0;
     box-sizing: border-box;
-    color: #fff;
+    color: #171717;
     cursor: pointer;
     display: inline-block;
     font-weight: 700;
@@ -98,7 +92,7 @@
     content: " ";
     width: 1.5625rem;
     height: 2px;
-    background: #eee;
+    background: #171717;
     top: 50%;
     left: 1.5em;
     position: absolute;
@@ -118,7 +112,7 @@
     transition: all 0.3s ease-in-out;
     text-transform: uppercase;
     text-decoration: none;
-    color: #eee;
+    color: #552619;
 }
 
 .fancy .top-key {
@@ -153,7 +147,8 @@
 
 .fancy:hover {
     color: white;
-    background: linear-gradient(141deg, rgb(200, 124, 255) 0%, rgb(116, 92, 252) 50%, rgb(63, 241, 253) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(178, 69, 110, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
 .fancy:hover::before {
@@ -240,26 +235,28 @@
 
 
 
-
+#about .right_side .img{
+    background-image: url("../../assets/images/display.jpg");
+}
 
 
 /* Cards */
-
-.front {
+.front1 {
     background-image: url("../../assets/images/photographer2.jpg");
 }
-/* 
+
 .front2 {
     background-image: url("../../assets/images/stockImage.png");
 }
 
 .front3 {
-    background-image: url("../../assets/images/photographer2.jpg");
+    background-image: url("../../assets/images/photograpphy3.jpg");
 }
- */
 
-#offers{
+
+#offers {
     padding: 5% 2rem;
+    background: #FBEAE7;
 }
 
 .heading_food {
@@ -267,12 +264,16 @@
     margin-bottom: 3px;
     /* margin-top: 2rem; */
     padding: 2rem 9%;
-    background-color: #171717;
+    /* background-color: #171717; */
 }
 
 .heading_food span {
     font-family: Brandon Text;
-    color: #c9a276;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(178, 69, 110, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 2.5rem;
     font-weight: 900;
 }
@@ -280,8 +281,8 @@
 .heading_food h3 {
     font-family: Brandon Text Regular;
     font-size: 1.5rem;
-    color: #eee;
-    font-weight: 600;
+    color: #b2456e;
+    font-weight: 700;
 }
 
 
@@ -320,7 +321,45 @@
     perspective: 1000px;
 }
 
-.front,
+.front1,
+.back {
+    background-size: cover;
+    box-shadow: 0 9px 8px 0 rgba(0, 0, 0, 0.30);
+    border-radius: 10px;
+    background-position: center;
+    transition: transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.8, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    backface-visibility: hidden;
+    text-align: center;
+    min-height: 25rem;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Brandon Text;
+    font-size: 1.5rem;
+    color: #FBFBFB;
+}
+
+.front2,
+.back {
+    background-size: cover;
+    box-shadow: 0 9px 8px 0 rgba(0, 0, 0, 0.30);
+    border-radius: 10px;
+    background-position: center;
+    transition: transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.8, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    backface-visibility: hidden;
+    text-align: center;
+    min-height: 25rem;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Brandon Text;
+    font-size: 1.5rem;
+    color: #FBFBFB;
+}
+
+.front3,
 .back {
     background-size: cover;
     box-shadow: 0 9px 8px 0 rgba(0, 0, 0, 0.30);
@@ -343,7 +382,7 @@
     background: black;
 }
 
-.front:after {
+.front1:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -358,7 +397,55 @@
     border-radius: 10px;
 }
 
-.container:hover .front,
+.front2:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .3;
+    background-color: black;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.front3:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .3;
+    background-color: black;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.container:hover .front1,
+.container:hover .back {
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.8, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.container:hover .front2,
+.container:hover .back {
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.8, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.container:hover .front3,
 .container:hover .back {
     -webkit-transition: -webkit-transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
     transition: -webkit-transform .7s cubic-bezier(0.8, 0.2, 0.2, 1);
@@ -389,6 +476,7 @@
     perspective: inherit;
     z-index: 2;
     line-height: 40px;
+    font-family: Brandon Text;
 }
 
 .container .back {
@@ -398,7 +486,21 @@
     transform-style: preserve-3d;
 }
 
-.container .front {
+.container .front1 {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container .front2 {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container .front3 {
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
     -webkit-transform-style: preserve-3d;
@@ -412,20 +514,46 @@
     transform-style: preserve-3d;
 }
 
-.container:hover .front {
+.container:hover .front1 {
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
 
-.front .inner p {
+.container:hover .front2 {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.container:hover .front3 {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.front1 .inner p {
     font-size: 2rem;
     margin-bottom: 2rem;
     position: relative;
 }
 
-.front .inner p:after {
+.front2 .inner p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.front3 .inner p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.front1 .inner p:after {
     content: '';
     width: 4rem;
     height: 2px;
@@ -438,7 +566,45 @@
     bottom: -.75rem;
 }
 
-.front .inner span {
+.front2 .inner p:after {
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #FBFBFB;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+}
+
+.front3 .inner p:after {
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #FBFBFB;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+}
+
+.front1 .inner span {
+    color: #FBFBFB;
+    font-family: Brandon Text Regular;
+    font-weight: bolder;
+}
+
+.front2 .inner span {
+    color: #FBFBFB;
+    font-family: Brandon Text Regular;
+    font-weight: bolder;
+}
+
+.front3 .inner span {
     color: #FBFBFB;
     font-family: Brandon Text Regular;
     font-weight: bolder;
@@ -447,10 +613,11 @@
 
 /* Last Part */
 #begin {
-    background: #171717;
+    background: #FBEAE7;
     height: 50vh;
-    margin-top: 5rem;
-    padding-top: 5rem;
+    /* margin-top: 5rem; */
+    /* padding-top: 5rem; */
+    padding: 2rem 9%;
 }
 
 #begin .container_begin {
@@ -469,7 +636,7 @@
 .begin_heading {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #eee;
+    color: #b2456e;
     font-size: 1.5rem;
     margin: 4rem;
     line-height: 2.5rem;
@@ -478,13 +645,17 @@
 }
 
 #begin .begin_heading span {
-    background: linear-gradient(141deg, rgb(200, 124, 255) 0%, rgb(116, 92, 252) 50%, rgb(63, 241, 253) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(178, 69, 110, 1) 35%, rgba(0, 212, 255, 1) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .begin_image .abt_img1 {
+    background-image: url("../../assets/images/photo4.jpg");
     height: 20rem;
     width: 25rem;
     transform: scale(1);
@@ -498,7 +669,7 @@
     transform: scale(1.09);
 }
 
-.button_end{
+.button_end {
     margin-left: 3rem;
 }
 
@@ -508,11 +679,12 @@
 /* Footer */
 .footer {
     padding: 80px 70px 0;
-    background-color: #FBFBFB;
+    background-color: #FBEAE7;
 }
 
 .row_foot {
     display: flex;
+    justify-content: center;
 }
 
 .nav-list_footer {
@@ -532,7 +704,8 @@
 .nav-list_footer .list-items_foot a {
     font-family: Brandon Text Regular;
     font-weight: 600;
-    color: #c9a276;
+    color: #b2456e;
+    text-decoration: none;
 }
 
 .footer_item {
@@ -545,12 +718,12 @@
 .footer_item p {
     margin: 15px 0 15px;
     font-family: Brandon Text Regular;
-    color: #c9a276;
+    color: #b2456e;
     font-weight: 600;
 }
 
 .footer_item .social_links a {
-    color: #c9a276;
+    color: #b2456e;
     height: 40px;
     width: 40px;
     display: inline-flex;
@@ -560,7 +733,7 @@
     margin: 0px 5px;
 }
 
-.footer .copyright {
+.footer .copyright1 {
     width: 100%;
     text-align: center;
     padding: 25px 15px;
@@ -568,4 +741,32 @@
     border-top: 1px solid black;
     font-family: Brandon Text Regular;
     font-weight: 600;
+}
+
+.footer .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+    /* border-top: 1px solid black; */
+    font-family: Brandon Text Regular;
+    font-weight: 600;
+}
+
+.right_side{
+    position: relative;
+    height: 50%;
+}
+.img{
+    position: relative;
+    /* height: 100px; */
+    width: 100%;
+    border-radius: 10%;
+
+}
+.img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+
 }
