@@ -13,6 +13,8 @@ import Home from "../src/Components/Home/Home";
 import { createTheme , ThemeProvider } from "@mui/material";
 import Register from "./Components/User/Register";
 import PhotographerPortfolio from "./Components/photographer/PhotographerPortfolio";
+import PricingPage from "../src/Components/Common/PricingPage"
+
 
 const theme = createTheme ({
   palette: {
@@ -45,6 +47,7 @@ function App() {
             <Route path="/register" element={<Register/>} />
             <Route path="/home" element={<Home />} />
             <Route path="/photographer" element={<PhotographerPortfolio />} />
+            <Route path="/pricing" element={<PricingPage />}/>
             {/* <InformationPage/> */}
           </Routes>
         </BrowserRouter>
