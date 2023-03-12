@@ -3,9 +3,13 @@ import LandingPage from "./Components/LandingPage/LandingPage";
 // import InformationPage  from '../src/Components/LandingPage/InformationPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Wedding from "./Components/Wedding/Wedding";
-import Login from "./Components/User/Login";
+import LoginUser from "./Components/User/LoginUser";
+import SignupUser from "./Components/User/SignupUser";
+import LoginAdmin from "./Components/Admin/LoginAdmin";
+import SignupAdmin from "./Components/Admin/SignupAdmin";
+import LoginphotoG from "./Components/photographer/LoginphotoG";
+import SignupphotoG from "./Components/photographer/SignupphotoG";
 import Home from "../src/Components/Home/Home";
-import { purple } from "@mui/material/colors";
 import { createTheme , ThemeProvider } from "@mui/material";
 import Register from "./Components/User/Register";
 import PhotographerPortfolio from "./Components/photographer/PhotographerPortfolio";
@@ -32,7 +36,12 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/wedding" element={<Wedding />} />
-            <Route path="/login" element={<Login/>} />
+            <Route path="/user/login" element={<LoginUser/>} />
+            <Route path="/user/signup" element={<SignupUser/>} />
+            <Route path="/admin/login" element={<LoginAdmin/>} />
+            <Route path="/admin/signup" element={<SignupAdmin/>} />
+            <Route path="/photo/login" element={<LoginphotoG/>} />
+            <Route path="/photo/signup" element={<SignupphotoG/>} />
             <Route path="/register" element={<Register/>} />
             <Route path="/home" element={<Home />} />
             <Route path="/photographer" element={<PhotographerPortfolio />} />
