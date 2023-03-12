@@ -8,8 +8,8 @@ import LoginUser from "./Components/User/LoginUser";
 import SignupUser from "./Components/User/SignupUser";
 import LoginAdmin from "./Components/Admin/LoginAdmin";
 import SignupAdmin from "./Components/Admin/SignupAdmin";
-import LoginphotoG from "./Components/photographer/LoginphotoG";
-import SignupphotoG from "./Components/photographer/SignupphotoG";
+import LoginphotoG from "./Components/Photographer/LoginphotoG";
+import SignupphotoG from "./Components/Photographer/SignupphotoG";
 import Home from "../src/Components/Home/Home";
 import { createTheme , ThemeProvider } from "@mui/material";
 import Register from "./Components/User/Register";
@@ -17,7 +17,7 @@ import PhotographerProfile from "./Components/Profile/PhotographerProfile";
 import Navbar from "./Components/Common/Navbar";
 import { useParams } from "react-router";
 // import PhotographerProfile from "./Components/Profile/PhotographerProfile";
-import PhotographerPortfolio from "./Components/photographer/PhotographerPortfolio";
+import PhotographerPortfolio from "./Components/Photographer/PhotographerPortfolio";
 import PricingPage from "../src/Components/Common/PricingPage"
 
 
@@ -51,7 +51,8 @@ function App() {
             <Route path="/photo/signup" element={<SignupphotoG/>} />
             <Route path="/register" element={<Register/>} />
             <Route path="/home" element={<Home />} />
-            <Route path="/photographer" element={<PhotographerPortfolio />} />
+            <Route path="/photographer/home" element={<PhotographerPortfolio />} />
+            <Route path="/photographer/profile" element={<PhotographerProfile />} />
             <Route path="/pricing" element={<PricingPage />}/>
             {/* <InformationPage/> */}
           </Routes>

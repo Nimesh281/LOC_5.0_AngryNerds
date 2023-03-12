@@ -12,7 +12,7 @@ import { Box, Container } from "@mui/system";
 import login from "../../assets/images/login.png";
 import { Link, Typography } from "@mui/material";
 
-function signupUser() {
+function SignupphotoG() {
   return (
     <MDBContainer fluid className="p-3 my-5">
       <MDBRow>
@@ -95,4 +95,4 @@ function signupUser() {
   );
 }
 
-export default signupUser;
+export default SignupphotoG;
