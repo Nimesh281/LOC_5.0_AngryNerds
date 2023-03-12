@@ -6,10 +6,11 @@ import Wedding from "./Components/Wedding/Wedding";
 import Login from "./Components/User/Login";
 import Home from "../src/Components/Home/Home";
 import { purple } from "@mui/material/colors";
-import { createMuiTheme, ThemeProvider } from "@mui/material";
+import { createTheme , ThemeProvider } from "@mui/material";
 import Register from "./Components/User/Register";
+import PhotographerPortfolio from "./Components/photographer/PhotographerPortfolio";
 
-const theme = createMuiTheme({
+const theme = createTheme ({
   palette: {
     primary: {
       main: "#e85a4f",
@@ -34,7 +35,7 @@ function App() {
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Register/>} />
             <Route path="/home" element={<Home />} />
-            <Route path="/PhotographerProfile" element={<Home />} />
+            <Route path="/photographer" element={<PhotographerPortfolio />} />
             {/* <InformationPage/> */}
           </Routes>
         </BrowserRouter>

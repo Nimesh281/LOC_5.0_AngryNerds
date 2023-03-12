@@ -6,13 +6,14 @@ import PhotographerCard from "../Home/PhotographerCard";
 import ProfileCard from "./ProfileCard";
 import image from "../../assets/images/logo.svg";
 import { Typography } from "@mui/material";
+import ProfilePage from "../Profile/ProfilePage";
 
 function PhotographerPortfolio() {
   return (
     <>
       <Navbar />
       <Box>
-        <ProfileCard/>
+        <ProfilePage/>
       </Box>
     </>
   );
